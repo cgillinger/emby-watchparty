@@ -56,3 +56,6 @@ wiki/
 
 # General ignored files
 *.bak
+
+# Playwright MCP working directory (screenshots, snapshots, console logs)
+.playwright-mcp/
