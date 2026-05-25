@@ -65,14 +65,15 @@
             brandSvg: FLAME_SVG
         },
         'lindstrom': {
-            brandName: 'Filmkväll',
-            brandSub: 'Watch Party',
-            chatHeading: 'Fikapaus-chatten',
-            partyPillText: 'Tittar tillsammans · %COUNT%',
-            libraryHeading: 'Biblioteket · Härnäst',
-            chatPlaceholder: 'Säg något…',
-            joinTitle: 'Gå med i filmkvällen',
-            autoplayLabel: 'Härnäst',
+            brandName: 'Watch Party',
+            brandSub: 'Lindström',
+            // "Fikapaus" is the one Swedish word kept — it's the theme's signature.
+            chatHeading: 'Fikapaus chat',
+            partyPillText: 'Watching together · %COUNT%',
+            libraryHeading: 'Library · Up next',
+            chatPlaceholder: 'Say something cozy…',
+            joinTitle: 'Join Watch Party',
+            autoplayLabel: 'Up next',
             brandSvg: KAFFEKOPP_SVG
         },
         'cyberpunk': {
