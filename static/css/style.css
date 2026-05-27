@@ -545,7 +545,7 @@ header p {
 
 .hero-image {
     display: none;
-    max-height: 45vh;
+    max-height: 30vh;
     max-width: 80%;
     object-fit: contain;
     margin-bottom: 1rem;
