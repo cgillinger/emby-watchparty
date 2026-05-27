@@ -530,6 +530,9 @@ header p {
     text-align: center;
     color: var(--text-secondary);
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .placeholder h2 {
     margin-bottom: 0.5rem;
@@ -538,6 +541,20 @@ header p {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.hero-image {
+    display: none;
+    max-height: 45vh;
+    max-width: 80%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 20px rgba(58, 106, 154, 0.25));
+    animation: heroFadeIn 0.8s ease-out;
+}
+@keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* The video player wrapper.
@@ -1249,6 +1266,29 @@ body[data-theme="lindstrom"] .chat-header::after {
     letter-spacing: 1px;
 }
 body[data-theme="lindstrom"] .chat-header { position: relative; padding-bottom: 1rem; }
+
+/* Faint water-tower watermark behind chat */
+body[data-theme="lindstrom"] .chat-container { overflow: hidden; }
+body[data-theme="lindstrom"] .chat-container::before {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 60%;
+    background: url('../img/lindstrom.png') center / contain no-repeat;
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 0;
+}
+body[data-theme="lindstrom"] .chat-header,
+body[data-theme="lindstrom"] .participant-section,
+body[data-theme="lindstrom"] .chat-messages,
+body[data-theme="lindstrom"] .chat-input {
+    position: relative;
+    z-index: 1;
+}
 
 /* Bottom decorative stripe */
 body[data-theme="lindstrom"] .party-container::after {

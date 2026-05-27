@@ -74,7 +74,10 @@
             chatPlaceholder: 'Say something cozy…',
             joinTitle: 'Join Watch Party',
             autoplayLabel: 'Up next',
-            brandSvg: KAFFEKOPP_SVG
+            brandSvg: KAFFEKOPP_SVG,
+            heroImage: true,
+            placeholderTitle: 'Välkommen!',
+            placeholderText: 'Browse the library below and pick something to watch together.'
         },
         'cyberpunk': {
             brandName: 'Watch Party',
@@ -188,6 +191,21 @@
 
         var autoplayLabel = document.getElementById('autoplayLabel');
         if (autoplayLabel) autoplayLabel.textContent = cfg.autoplayLabel;
+
+        var heroImage = document.getElementById('heroImage');
+        if (heroImage) {
+            heroImage.style.display = cfg.heroImage ? 'block' : 'none';
+        }
+
+        var placeholderTitle = document.getElementById('placeholderTitle');
+        if (placeholderTitle) {
+            placeholderTitle.textContent = cfg.placeholderTitle || 'No video selected';
+        }
+
+        var placeholderText = document.getElementById('placeholderText');
+        if (placeholderText) {
+            placeholderText.textContent = cfg.placeholderText || 'Browse the library below and pick something to start watching together.';
+        }
 
         var pillText = document.getElementById('partyPillText');
         var userCountEl = document.getElementById('userCount');

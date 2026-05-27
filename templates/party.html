@@ -70,8 +70,9 @@
             <main class="video-area">
                 <div id="noVideoState" class="no-video-state">
                     <div class="placeholder">
-                        <h2>No video selected</h2>
-                        <p>Browse the library below and pick something to start watching together.</p>
+                        <img id="heroImage" class="hero-image" src="{{ url_for('main.static', filename='img/lindstrom.png') }}" alt="Välkommen till Lindström" style="display: none;">
+                        <h2 id="placeholderTitle">No video selected</h2>
+                        <p id="placeholderText">Browse the library below and pick something to start watching together.</p>
                     </div>
                 </div>
 
